@@ -1,0 +1,12 @@
+ 
+{% extends "base.html" %}
+{% block title %}Login with OTP{% endblock %}
+{% block body %}
+<h2>Login with OTP</h2>
+<p>Enter your registered email to receive a one-time code.</p>
+<form method="POST" action="{{ url_for('login_otp_request') }}">
+  <input type="email" name="email" placeholder="Email" required>
+  <button type="submit">Send OTP</button>
+</form>
+<p><a href="{{ url_for('login') }}">Back to password login</a></p>
+{% endblock %}
